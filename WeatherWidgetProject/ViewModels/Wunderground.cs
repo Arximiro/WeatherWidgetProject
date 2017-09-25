@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
-namespace WeatherProject.ViewModels
+namespace WeatherWidgetProject.ViewModels
 {
     public class Features
     {
@@ -158,6 +159,8 @@ namespace WeatherProject.ViewModels
     {
         public Response response { get; set; }
         public Forecast forecast { get; set; }
+
+        [Required]
         public string Zipcode { get; set; }
         public string[] Zipcodes { get; set; }
         public Weather1 Weather1 { get; set; }

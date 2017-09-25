@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using System.IO;
 using System.Net;
 using System.Web.Mvc;
-using WeatherProject.ViewModels;
+using WeatherWidgetProject.ViewModels;
 
 namespace WeatherProject.Controllers
 {
@@ -22,6 +22,10 @@ namespace WeatherProject.Controllers
         [HttpPost]
         public ActionResult ViewWeather(RootObject rootObject)
         {
+            if (!ModelState.IsValid)
+                return RedirectToAction("Index", "Home");
+            
+
             rootObject.Zipcodes = rootObject.Zipcode.Split(',');
 
             if (rootObject.Zipcodes.Length > 1)

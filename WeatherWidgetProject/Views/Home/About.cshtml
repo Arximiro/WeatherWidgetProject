@@ -3,9 +3,14 @@
 }
 <h2>What is the point of this app?</h2>
 
-<img src="https://www.quia.com/files/quia/users/marianamilheiro/PARTLY_CLOUDY" />
+<img src="https://clipartion.com/wp-content/uploads/2015/12/dark-cloud-clip-art-at-vector-clip-art-online.png" />
 
 <h3>This app will allow you to get stuff you can do on your phone in about 5 seconds.</h3>
 <br />
 <br />
 @Html.Partial("WeatherWidget")
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,4 +1,4 @@
-﻿@model WeatherProject.ViewModels.RootObject
+﻿@model WeatherWidgetProject.ViewModels.RootObject
 @{
     ViewBag.Title = "Get Weather";
 }
@@ -10,9 +10,15 @@
     <div class="form-group">
         @Html.LabelFor(m => m.Zipcode, "Enter Your Zip/Postal Code and Hit Submit.")
         @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control" })
+        <small>@Html.ValidationMessageFor(m => m.Zipcode)</small>
         <br />
         <button type="submit" class="btn btn-primary">Submit</button>
     </div>
 }
 
 <small>You may enter up to 5 Zip/Postal Codes separated by commas.</small>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
