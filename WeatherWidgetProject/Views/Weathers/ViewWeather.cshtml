@@ -1,0 +1,31 @@
+﻿@model WeatherProject.ViewModels.RootObject
+
+@{ViewBag.Title = "View Weather";}
+
+
+
+<h2>10 Day Weather Forecast For @Model.Zipcode</h2>
+
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th></th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

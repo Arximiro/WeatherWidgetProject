@@ -1,0 +1,18 @@
+﻿@model WeatherProject.ViewModels.RootObject
+@{
+    ViewBag.Title = "Get Weather";
+}
+<br />
+<br />
+
+@using (Html.BeginForm("ViewWeather", "Weathers"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.Zipcode, "Enter Your Zip/Postal Code and Hit Submit.")
+        @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control" })
+        <br />
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+}
+
+<small>You may enter up to 5 Zip/Postal Codes separated by commas.</small>

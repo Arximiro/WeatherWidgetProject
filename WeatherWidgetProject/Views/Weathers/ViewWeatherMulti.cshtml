@@ -1,0 +1,147 @@
+﻿@model WeatherProject.ViewModels.RootObject
+
+@{ViewBag.Title = "View Weather Multi";}
+
+
+
+<h2>10 Day Weather Forecast</h2>
+
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Zip/Postal Code (@Model.Weather1.Zipcode)</th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.Weather1.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Zip/Postal Code (@Model.Weather2.Zipcode)</th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.Weather2.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Zip/Postal Code (@Model.Weather3.Zipcode)</th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.Weather3.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Zip/Postal Code (@Model.Weather4.Zipcode)</th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.Weather4.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+<table class="table table=bordered table-hover">
+
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Zip/Postal Code (@Model.Weather5.Zipcode)</th>
+            <th>Weather Forecast</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var forecast in @Model.Weather5.forecast.txt_forecast.forecastday)
+        {
+            <tr>
+                <td>@forecast.title</td>
+                <td><img src="@forecast.icon_url" /></td>
+                <td>@forecast.fcttext</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
