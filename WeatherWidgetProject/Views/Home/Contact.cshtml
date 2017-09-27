@@ -1,18 +1,29 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>Contact</h2>
-<h3>Hit me up!</h3>
 
-<address>
-    RIP GG<br />
-    Codesville, WA 12345<br />
-    <br />
-    <br />
-    <p> Or call me at:</p>
-    <abbr title="Phone">P:</abbr>
-    666-888-1337
-</address>
+<div class="row">
+    <div class="col-md-5">
+        <h2>Contact</h2>
+        <img src="http://cognitiveanchoring.com/wp-content/uploads/2013/12/contact-me-no-data-md.png" />
+    </div>
+    
+    <div class="col-md-5">
+        <br /><br />
+        <h2>Arx</h2>
+        <h2>Codesville, WA 12345</h2>
+    </div>
+    
+    <div class="col-md-5">
+        <br /><br />
+        <small>Or call me at: 666-888-1337</small></br>
+        <small>Email me at <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Arxcodes@notarealemail.com</a></small>
+        </br></br>
+        <img src="~/Content/twitter-logo-small.png" /> <a href="https://twitter.com/realDonaldTrump">Follow Me</a>
+        </div>
+</div>
+        
+        
 <br />
 <br />
 @Html.Partial("WeatherWidget")

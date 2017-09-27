@@ -3,7 +3,7 @@
 @using (Html.BeginForm("ViewWeather", "Weathers"))
 {
     <div class="form-group">
-        @Html.LabelFor(m => m.Zipcode, "Enter Your Zipcode")
+        @Html.LabelFor(m => m.Zipcode, "Enter Your Zip/Postal Code")
         @Html.TextBoxFor(m => m.Zipcode, new { @class = "form-control" })
         <small>@Html.ValidationMessageFor(m => m.Zipcode)</small>
         <br />

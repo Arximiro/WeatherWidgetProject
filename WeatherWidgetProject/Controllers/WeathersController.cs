@@ -106,11 +106,10 @@ namespace WeatherProject.Controllers
                 {
                     var reader = new StreamReader(response.GetResponseStream());
                     apiResponse = reader.ReadToEnd();
+                    rootObject = JsonConvert.DeserializeObject<RootObject>(apiResponse);
+                    rootObject.Zipcode = zip;
                 }
-
-                rootObject = JsonConvert.DeserializeObject<RootObject>(apiResponse);
-                rootObject.Zipcode = zip;
-
+                
                 return View(rootObject);
             }
         }
